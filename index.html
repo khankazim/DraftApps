@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CareerAddons Exam Simulator for Mobile devices</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link  type="text/css"  rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css" />
+ <script  type="text/javascript"  src="js/jquery-1.10.2.min.js"></script>
+ <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
+ <script type="text/javascript" src="js/ca.js"></script>
+</head>
+<body>
+<div data-role="page" id="welcome" data-theme="d">
+	<div data-role="header">
+		<img style="max-width:100%" src="./img/bg-header.gif" />
+	</div>
+
+	<div data-role="main" class="ui-content" >
+	<div id="checkConnecvityDiv">
+
+	<br/><br/>
+	<br/>
+	<br/>
+
+	<p><a href="#welcome" class="ui-btn ui-shadow ui-corner-all" onclick="javascript:return checkConnecvity();">Check Connectivity </a></p>
+	<br/><br/>
+	<br/>
+	<br/>
+
+
+
+	</div>
+    </div>
+
+	<div data-role="footer" align="center">
+	    <small>CareerAddons Copyright 2010-2014</small>
+	</div>
+</div>
+
+<div data-role="page" id="login" data-theme="d"  >
+	<div data-role="header">
+		<img style="max-width:100%" src="./img/bg-header.gif" />
+	</div><!-- /header -->
+
+	<div data-role="main" class="ui-content">
+		<div id="messageDiv1"></div>
+		<div id='bodyDiv1'></div>
+		<div id="StartExamDiv" align="center"> </div>
+		<div id="counterDiv">
+		   <h2>Sign-in</h2>
+				<form id="loginForm" name="loginForm" class="ui-body ui-body-a ui-corner-all" method="get" >
+				<fieldset>
+                 <div data-role="fieldcontain">
+				 <label for="userName">Email Address :</label>  <input name="userName" id="userName" type="text" value="">
+				 </div>
+                 <div data-role="fieldcontain">
+					<label for="password1">Password :</label>  <input name="password" id="password" type="password" value="" autocomplete="off">
+ 				</div>
+			</fieldset>
+ 				<input type="submit"  class="ui-btn ui-shadow ui-corner-all" name="submit" id="submit" value="Login" onclick="javascript:return validateLoginForm();">
+
+			</form>
+			<p><a href="#welcome" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all">Back</a></p>
+		  </div>
+ 	</div>
+
+	<div data-role="footer" align="center">
+	     <small>CareerAddons Copyright 2010-2014</small>
+	</div>
+</div><!-- /page two -->
+
+ <div data-role="page" id="startExam" data-theme="d"  >
+	<div data-role="header">
+		<img style="max-width:100%" src="./img/bg-header.gif" />
+	</div><!-- /header -->
+
+	<div data-role="main" class="ui-content">
+ 	    <div id="QuestionMessageDiv"> </div>
+		<div id='QuestionPaneDiv'></div>
+		<div id="ShowAnswerDiv"></div>
+
+	 	<div id="PreviousDiv"></div>
+		<div id="NextDiv"></div>
+
+		<form name="dummy" id ="dummy">
+		<input type="hidden" name="CurrentQID" id="CurrentQID" value="0" />
+		<input type="hidden" name="QCounter" id="QCounter" value="0" />
+			<input type="hidden" name="ExamCode" id="ExamCode" value="" />
+		<input type="hidden" name="TotalQuestion" id="TotalQuestion" value="0" />
+		</form>
+  	</div><!-- /content -->
+
+<div data-role="footer" align="center">
+	    <small>CareerAddons Copyright 2010-2014</small>
+	</div>
+</div><!-- /page two -->
+
+
+
+
+
+
+<div data-role="page" id="register" data-theme="d"   >
+	<div data-role="header" >
+		<img style="max-width:100%" src="./img/bg-header.gif" />
+	</div><!-- /header -->
+
+	<div data-role="main" class="ui-content">
+		<div id="signUpStatus" >
+	   </div>
+
+		<div id="registerDiv" >
+		<h2>Register yourself</h2>
+		<form id="form1" name="form1" method="get"  class="ui-body ui-body-a ui-corner-all" >
+				<fieldset>
+                 <div data-role="fieldcontain">
+                     <label for="fName">Display Name :</label>  <input name="fName" id="fName" type="text" value="">
+                  </div>
+ 				<div data-role="fieldcontain">
+                    <label for="userName1">Email Address <span  style="font-size:10px;">(used as login)</span>:</label><input name="userName1" id="userName1" type="text" value="">
+                    </div>
+              	<div data-role="fieldcontain">
+					<label for="password1">Password <span  style="font-size:10px;">(6 characters min.)</span> :</label>  <input name="password1" id="password1" type="password" value="" autocomplete="off">
+				</div>
+
+				 <div data-role="fieldcontain">
+				 <div>
+				<table> <tr><td><label for="tnc">Term &amp; Condition</label> <input type="checkbox" name="tnc" id="tnc" checked="checked"/></td><td><a href="http://www.careeraddons.com/terms.htm"><small>view</small></a>  </td> </tr></table>
+
+	         </div>
+	         		 </div>
+ 	    	</fieldset>
+
+	         <input type="submit"  class="ui-btn ui-shadow ui-corner-all"   name="regsubmit" id="regsubmit" value="Register"  onclick="javascript:return validateForm();">
+
+        </form>
+ 	</div>
+ 		<p><a href="#welcome" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all">Back</a></p>
+	</div><!-- /content -->
+
+<div data-role="footer" align="center">
+	      <small>CareerAddons Copyright 2010-2014</small>
+	</div>
+
+</div><!-- /page popup -->
+
+</body>
+</html>
